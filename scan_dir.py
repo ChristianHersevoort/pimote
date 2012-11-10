@@ -58,9 +58,9 @@ class LibraryScanner:
         if extension == "":
            return
 
-        if not self.__extension_white_list.__contains__(extension):
-            logger.debug("Ignoring file '%s' with extension '%s'" % (filename, extension))
-            return
+        #if not self.__extension_white_list.__contains__(extension):
+        #    logger.debug("Ignoring file '%s' with extension '%s'" % (filename, extension))
+        #    return
 
         file_hash = self.__get_hash(file_path)
 

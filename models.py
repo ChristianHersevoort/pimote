@@ -25,3 +25,11 @@ class File(db.Model):
 
     def __repr__(self):
         return '<File %r, hash: %r>' % (self.name, self.hash)
+
+    @property
+    def serialize(self):
+        return {
+            'name' : self.name,
+            'hash' : self.hash,
+            'is_dir': self.is_dir
+        }
